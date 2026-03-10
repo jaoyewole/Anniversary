@@ -312,7 +312,8 @@
       text-transform: uppercase;
       opacity: 0.6;
     }
-    .gallery-item img {
+    .gallery-item img,
+    .gallery-item video {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -320,6 +321,9 @@
     }
     .gallery-item img[src=""] {
       display: none;
+    }
+    .gallery-video-item video {
+      cursor: pointer;
     }
     .gallery-caption {
       position: absolute;
@@ -695,46 +699,211 @@
     <div class="section-divider">♥</div>
 
     <div class="gallery-grid reveal">
-      <!-- Slot 1 (featured / wide) -->
-      <div class="gallery-item">
-        <img src="/images/photo1.jpg" alt="Joshua & Mimi - Photo 1" />
-        <div class="gallery-placeholder">
-          <span class="ph-icon">📷</span>
-          <p>Add your favourite photo here</p>
-        </div>
+      <!-- ── Photos ─────────────────────────────────────────── -->
+      <div class="gallery-item" style="grid-column: span 2; aspect-ratio: 16/9;">
+        <img src="/images/photo1.jpg" alt="Joshua &amp; Mimi - Photo 1" />
         <div class="gallery-caption">Our favourite together ♥</div>
       </div>
-
-      <!-- Slots 2–7 -->
       <div class="gallery-item">
-        <img src="/images/photo2.jpg" alt="Joshua & Mimi - Photo 2" />
-        <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 2</p></div>
+        <img src="/images/photo2.jpg" alt="Joshua &amp; Mimi - Photo 2" />
         <div class="gallery-caption">A beautiful memory</div>
       </div>
       <div class="gallery-item">
-        <img src="/images/photo3.jpg" alt="Joshua & Mimi - Photo 3" />
-        <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 3</p></div>
+        <img src="/images/photo3.jpg" alt="Joshua &amp; Mimi - Photo 3" />
         <div class="gallery-caption">Together always</div>
       </div>
       <div class="gallery-item">
-        <img src="/images/photo4.jpg" alt="Joshua & Mimi - Photo 4" />
-        <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 4</p></div>
+        <img src="/images/photo4.jpg" alt="Joshua &amp; Mimi - Photo 4" />
         <div class="gallery-caption">Pure happiness</div>
       </div>
       <div class="gallery-item">
-        <img src="/images/photo5.jpg" alt="Joshua & Mimi - Photo 5" />
-        <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 5</p></div>
+        <img src="/images/photo5.jpg" alt="Joshua &amp; Mimi - Photo 5" />
         <div class="gallery-caption">Golden moments</div>
       </div>
       <div class="gallery-item">
-        <img src="/images/photo6.jpg" alt="Joshua & Mimi - Photo 6" />
-        <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 6</p></div>
+        <img src="/images/photo6.jpg" alt="Joshua &amp; Mimi - Photo 6" />
         <div class="gallery-caption">Forever yours</div>
       </div>
       <div class="gallery-item">
-        <img src="/images/photo7.jpg" alt="Joshua & Mimi - Photo 7" />
-        <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 7</p></div>
+        <img src="/images/photo7.jpg" alt="Joshua &amp; Mimi - Photo 7" />
         <div class="gallery-caption">Every single day</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo8.jpg" alt="Joshua &amp; Mimi - Photo 8" />
+        <div class="gallery-caption">Made for each other</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo9.jpg" alt="Joshua &amp; Mimi - Photo 9" />
+        <div class="gallery-caption">This moment ♥</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo10.jpg" alt="Joshua &amp; Mimi - Photo 10" />
+        <div class="gallery-caption">Better together</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo11.jpg" alt="Joshua &amp; Mimi - Photo 11" />
+        <div class="gallery-caption">My whole world</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo12.jpg" alt="Joshua &amp; Mimi - Photo 12" />
+        <div class="gallery-caption">You &amp; me</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo13.jpg" alt="Joshua &amp; Mimi - Photo 13" />
+        <div class="gallery-caption">Always smiling</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo14.jpg" alt="Joshua &amp; Mimi - Photo 14" />
+        <div class="gallery-caption">Our kind of perfect</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo15.jpg" alt="Joshua &amp; Mimi - Photo 15" />
+        <div class="gallery-caption">Simply us</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo16.jpg" alt="Joshua &amp; Mimi - Photo 16" />
+        <div class="gallery-caption">Where I belong</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo17.jpg" alt="Joshua &amp; Mimi - Photo 17" />
+        <div class="gallery-caption">So lucky</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo18.jpg" alt="Joshua &amp; Mimi - Photo 18" />
+        <div class="gallery-caption">Best of times</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo19.jpg" alt="Joshua &amp; Mimi - Photo 19" />
+        <div class="gallery-caption">Lost in love</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo20.jpg" alt="Joshua &amp; Mimi - Photo 20" />
+        <div class="gallery-caption">Our little world</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo21.jpg" alt="Joshua &amp; Mimi - Photo 21" />
+        <div class="gallery-caption">Side by side</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo22.jpg" alt="Joshua &amp; Mimi - Photo 22" />
+        <div class="gallery-caption">Endless happiness</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo23.jpg" alt="Joshua &amp; Mimi - Photo 23" />
+        <div class="gallery-caption">My favourite person</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo24.jpg" alt="Joshua &amp; Mimi - Photo 24" />
+        <div class="gallery-caption">This is love</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo25.jpg" alt="Joshua &amp; Mimi - Photo 25" />
+        <div class="gallery-caption">Nothing but joy</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo26.jpg" alt="Joshua &amp; Mimi - Photo 26" />
+        <div class="gallery-caption">Here with you</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo27.jpg" alt="Joshua &amp; Mimi - Photo 27" />
+        <div class="gallery-caption">Moments like these</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo28.jpg" alt="Joshua &amp; Mimi - Photo 28" />
+        <div class="gallery-caption">Worth every second</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo29.jpg" alt="Joshua &amp; Mimi - Photo 29" />
+        <div class="gallery-caption">Heart so full</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo30.jpg" alt="Joshua &amp; Mimi - Photo 30" />
+        <div class="gallery-caption">Magic between us</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo31.jpg" alt="Joshua &amp; Mimi - Photo 31" />
+        <div class="gallery-caption">Forever sounds good</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo32.jpg" alt="Joshua &amp; Mimi - Photo 32" />
+        <div class="gallery-caption">Just us two</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo33.jpg" alt="Joshua &amp; Mimi - Photo 33" />
+        <div class="gallery-caption">Always &amp; always</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo34.jpg" alt="Joshua &amp; Mimi - Photo 34" />
+        <div class="gallery-caption">You complete me</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo35.jpg" alt="Joshua &amp; Mimi - Photo 35" />
+        <div class="gallery-caption">Grateful every day</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo36.jpg" alt="Joshua &amp; Mimi - Photo 36" />
+        <div class="gallery-caption">My greatest adventure</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/photo37.jpg" alt="Joshua &amp; Mimi - Photo 37" />
+        <div class="gallery-caption">One year of us ♥</div>
+      </div>
+
+      <!-- ── Videos ─────────────────────────────────────────── -->
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video1.mp4" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">Moving memories ♥</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video2.mp4" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">Captured forever</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video3.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">Life in motion</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video4.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">Our story, moving</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video5.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">A moment alive</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video6.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">Time together</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video7.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">Real &amp; beautiful</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video8.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">In the moment</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video9.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">Living our love</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video10.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">This is us</div>
+      </div>
+      <div class="gallery-item gallery-video-item">
+        <video src="/images/video11.mov" muted playsinline loop
+               onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+        <div class="gallery-caption">Cherished forever</div>
       </div>
     </div>
   </div>
