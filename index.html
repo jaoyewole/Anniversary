@@ -316,7 +316,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: none; /* shown once src added */
+      display: block;
+    }
+    .gallery-item img[src=""] {
+      display: none;
     }
     .gallery-caption {
       position: absolute;
@@ -694,7 +697,7 @@
     <div class="gallery-grid reveal">
       <!-- Slot 1 (featured / wide) -->
       <div class="gallery-item">
-        <img src="" alt="Our favourite photo together" />
+        <img src="/images/photo1.jpg" alt="Joshua & Mimi - Photo 1" />
         <div class="gallery-placeholder">
           <span class="ph-icon">📷</span>
           <p>Add your favourite photo here</p>
@@ -704,39 +707,36 @@
 
       <!-- Slots 2–7 -->
       <div class="gallery-item">
-        <img src="" alt="" />
+        <img src="/images/photo2.jpg" alt="Joshua & Mimi - Photo 2" />
         <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 2</p></div>
         <div class="gallery-caption">A beautiful memory</div>
       </div>
       <div class="gallery-item">
-        <img src="" alt="" />
+        <img src="/images/photo3.jpg" alt="Joshua & Mimi - Photo 3" />
         <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 3</p></div>
         <div class="gallery-caption">Together always</div>
       </div>
       <div class="gallery-item">
-        <img src="" alt="" />
+        <img src="/images/photo4.jpg" alt="Joshua & Mimi - Photo 4" />
         <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 4</p></div>
         <div class="gallery-caption">Pure happiness</div>
       </div>
       <div class="gallery-item">
-        <img src="" alt="" />
+        <img src="/images/photo5.jpg" alt="Joshua & Mimi - Photo 5" />
         <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 5</p></div>
         <div class="gallery-caption">Golden moments</div>
       </div>
       <div class="gallery-item">
-        <img src="" alt="" />
+        <img src="/images/photo6.jpg" alt="Joshua & Mimi - Photo 6" />
         <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 6</p></div>
         <div class="gallery-caption">Forever yours</div>
       </div>
       <div class="gallery-item">
-        <img src="" alt="" />
+        <img src="/images/photo7.jpg" alt="Joshua & Mimi - Photo 7" />
         <div class="gallery-placeholder"><span class="ph-icon">🌸</span><p>Photo 7</p></div>
         <div class="gallery-caption">Every single day</div>
       </div>
     </div>
-    <p style="text-align:center; margin-top:1.5rem; font-size:0.8rem; color:var(--text-light); letter-spacing:0.05em;">
-      Replace the <code>src=""</code> attributes in the HTML with your own image paths to populate the gallery.
-    </p>
   </div>
 </section>
 
