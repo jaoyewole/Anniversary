@@ -269,78 +269,38 @@
       50%       { transform: translateX(-50%) translateY(6px); }
     }
 
-    /* ── GALLERY SLIDESHOW ────────────────────────────────────── */
+    /* ── VIDEO SECTION ────────────────────────────────────────── */
     #gallery { background: var(--blush); border-top: 1px solid var(--rose); border-bottom: 1px solid var(--rose); }
-    .slideshow {
+    .video-wrapper {
       position: relative;
-      max-width: 780px;
+      width: 100%;
+      max-width: 820px;
       margin: 0 auto;
-      border-radius: 16px;
+      border-radius: 6px;
       overflow: hidden;
+      box-shadow: 0 16px 48px rgba(28, 28, 28, 0.12);
+      border: 1px solid var(--rose);
       background: var(--text-dark);
-      aspect-ratio: 4/3;
-      box-shadow: 0 16px 48px rgba(58, 42, 46, 0.18);
-      user-select: none;
     }
-    .slide-track {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .slide-media {
-      width: 100%; height: 100%;
-      object-fit: cover;
+    .video-wrapper::before {
+      content: '';
       display: block;
-      opacity: 0;
-      transition: opacity 0.4s ease;
+      padding-top: 56.25%;
     }
-    .slide-media.loaded { opacity: 1; }
-    .slide-btn {
+    .video-wrapper iframe {
       position: absolute;
-      top: 50%; transform: translateY(-50%);
-      background: rgba(253, 248, 243, 0.88);
-      border: none; border-radius: 50%;
-      width: 44px; height: 44px;
-      font-size: 1.4rem; line-height: 1;
-      cursor: pointer;
-      color: var(--text-dark);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-      transition: background 0.2s, transform 0.2s;
-      z-index: 5;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
-    .slide-btn:hover { background: var(--white); transform: translateY(-50%) scale(1.08); }
-    .slide-btn.prev { left: 0.8rem; }
-    .slide-btn.next { right: 0.8rem; }
-    .slide-counter {
-      position: absolute;
-      top: 0.7rem; right: 0.8rem;
-      background: rgba(0, 0, 0, 0.38);
-      color: var(--white);
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      padding: 0.25rem 0.65rem;
-      border-radius: 20px;
-      z-index: 5;
-    }
-    .slide-caption {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 1.4rem 3.5rem 0.9rem;
-      background: linear-gradient(transparent, rgba(58, 42, 46, 0.65));
-      color: var(--white);
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.1rem;
+    .video-caption {
       text-align: center;
-      pointer-events: none;
-    }
-    .slide-type-badge {
-      position: absolute;
-      top: 0.7rem; left: 0.8rem;
-      background: rgba(0, 0, 0, 0.38);
-      color: var(--white);
-      font-size: 0.7rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: 20px;
-      z-index: 5;
+      margin-top: 1.6rem;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      color: var(--text-mid);
+      letter-spacing: 0.02em;
     }
 
     /* ── TIMELINE ─────────────────────────────────────────────── */
@@ -819,21 +779,21 @@
   </div>
 </section>
 
-<!-- ───────── GALLERY ───────── -->
+<!-- ───────── VIDEO ───────── -->
 <section id="gallery">
   <div class="container">
-    <span class="section-label">Memories</span>
-    <h2 class="section-title">Our Photo Gallery</h2>
+    <span class="section-label">Us, On Camera</span>
+    <h2 class="section-title">Our Anniversary Film</h2>
     <div class="section-divider">♥</div>
 
-    <div class="slideshow reveal" id="slideshow">
-      <div class="slide-track" id="slide-track"></div>
-      <button class="slide-btn prev" id="slide-prev" aria-label="Previous">&#8249;</button>
-      <button class="slide-btn next" id="slide-next" aria-label="Next">&#8250;</button>
-      <div class="slide-counter" id="slide-counter">1 / 48</div>
-      <div class="slide-type-badge" id="slide-type"></div>
-      <div class="slide-caption" id="slide-caption"></div>
+    <div class="video-wrapper reveal">
+      <iframe
+        src="https://drive.google.com/file/d/19UJpgb6o5CPrm5lqEUSJK29Bo9ncoTFR/preview"
+        allow="autoplay"
+        allowfullscreen>
+      </iframe>
     </div>
+    <p class="video-caption reveal">Every frame, a memory. Every second, a reason to love you more. ♥</p>
   </div>
 </section>
 
@@ -1156,120 +1116,6 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   })();
 
-  /* ── Slideshow ────────────────────────────────────────────── */
-  (function slideshow() {
-    const media = [
-      { t:'img', src:'/images/photo1.jpg',  alt:'Joshua & Mimi - Photo 1',  cap:'Our favourite together \u2665' },
-      { t:'img', src:'/images/photo2.jpg',  alt:'Joshua & Mimi - Photo 2',  cap:'A beautiful memory' },
-      { t:'img', src:'/images/photo3.jpg',  alt:'Joshua & Mimi - Photo 3',  cap:'Together always' },
-      { t:'img', src:'/images/photo4.jpg',  alt:'Joshua & Mimi - Photo 4',  cap:'Pure happiness' },
-      { t:'img', src:'/images/photo5.jpg',  alt:'Joshua & Mimi - Photo 5',  cap:'Golden moments' },
-      { t:'img', src:'/images/photo6.jpg',  alt:'Joshua & Mimi - Photo 6',  cap:'Forever yours' },
-      { t:'img', src:'/images/photo7.jpg',  alt:'Joshua & Mimi - Photo 7',  cap:'Every single day' },
-      { t:'img', src:'/images/photo8.jpg',  alt:'Joshua & Mimi - Photo 8',  cap:'Made for each other' },
-      { t:'img', src:'/images/photo9.jpg',  alt:'Joshua & Mimi - Photo 9',  cap:'This moment \u2665' },
-      { t:'img', src:'/images/photo10.jpg', alt:'Joshua & Mimi - Photo 10', cap:'Better together' },
-      { t:'img', src:'/images/photo11.jpg', alt:'Joshua & Mimi - Photo 11', cap:'My whole world' },
-      { t:'img', src:'/images/photo12.jpg', alt:'Joshua & Mimi - Photo 12', cap:'You & me' },
-      { t:'img', src:'/images/photo13.jpg', alt:'Joshua & Mimi - Photo 13', cap:'Always smiling' },
-      { t:'img', src:'/images/photo14.jpg', alt:'Joshua & Mimi - Photo 14', cap:'Our kind of perfect' },
-      { t:'img', src:'/images/photo15.jpg', alt:'Joshua & Mimi - Photo 15', cap:'Simply us' },
-      { t:'img', src:'/images/photo16.jpg', alt:'Joshua & Mimi - Photo 16', cap:'Where I belong' },
-      { t:'img', src:'/images/photo17.jpg', alt:'Joshua & Mimi - Photo 17', cap:'So lucky' },
-      { t:'img', src:'/images/photo18.jpg', alt:'Joshua & Mimi - Photo 18', cap:'Best of times' },
-      { t:'img', src:'/images/photo19.jpg', alt:'Joshua & Mimi - Photo 19', cap:'Lost in love' },
-      { t:'img', src:'/images/photo20.jpg', alt:'Joshua & Mimi - Photo 20', cap:'Our little world' },
-      { t:'img', src:'/images/photo21.jpg', alt:'Joshua & Mimi - Photo 21', cap:'Side by side' },
-      { t:'img', src:'/images/photo22.jpg', alt:'Joshua & Mimi - Photo 22', cap:'Endless happiness' },
-      { t:'img', src:'/images/photo23.jpg', alt:'Joshua & Mimi - Photo 23', cap:'My favourite person' },
-      { t:'img', src:'/images/photo24.jpg', alt:'Joshua & Mimi - Photo 24', cap:'This is love' },
-      { t:'img', src:'/images/photo25.jpg', alt:'Joshua & Mimi - Photo 25', cap:'Nothing but joy' },
-      { t:'img', src:'/images/photo26.jpg', alt:'Joshua & Mimi - Photo 26', cap:'Here with you' },
-      { t:'img', src:'/images/photo27.jpg', alt:'Joshua & Mimi - Photo 27', cap:'Moments like these' },
-      { t:'img', src:'/images/photo28.jpg', alt:'Joshua & Mimi - Photo 28', cap:'Worth every second' },
-      { t:'img', src:'/images/photo29.jpg', alt:'Joshua & Mimi - Photo 29', cap:'Heart so full' },
-      { t:'img', src:'/images/photo30.jpg', alt:'Joshua & Mimi - Photo 30', cap:'Magic between us' },
-      { t:'img', src:'/images/photo31.jpg', alt:'Joshua & Mimi - Photo 31', cap:'Forever sounds good' },
-      { t:'img', src:'/images/photo32.jpg', alt:'Joshua & Mimi - Photo 32', cap:'Just us two' },
-      { t:'img', src:'/images/photo33.jpg', alt:'Joshua & Mimi - Photo 33', cap:'Always & always' },
-      { t:'img', src:'/images/photo34.jpg', alt:'Joshua & Mimi - Photo 34', cap:'You complete me' },
-      { t:'img', src:'/images/photo35.jpg', alt:'Joshua & Mimi - Photo 35', cap:'Grateful every day' },
-      { t:'img', src:'/images/photo36.jpg', alt:'Joshua & Mimi - Photo 36', cap:'My greatest adventure' },
-      { t:'img', src:'/images/photo37.jpg', alt:'Joshua & Mimi - Photo 37', cap:'One year of us \u2665' },
-      { t:'video', src:'/images/video1.mp4',  cap:'Moving memories \u2665' },
-      { t:'video', src:'/images/video2.mp4',  cap:'Captured forever' },
-      { t:'video', src:'/images/video3.mov',  cap:'Life in motion' },
-      { t:'video', src:'/images/video4.mov',  cap:'Our story, moving' },
-      { t:'video', src:'/images/video5.mov',  cap:'A moment alive' },
-      { t:'video', src:'/images/video6.mov',  cap:'Time together' },
-      { t:'video', src:'/images/video7.mov',  cap:'Real & beautiful' },
-      { t:'video', src:'/images/video8.mov',  cap:'In the moment' },
-      { t:'video', src:'/images/video9.mov',  cap:'Living our love' },
-      { t:'video', src:'/images/video10.mov', cap:'This is us' },
-      { t:'video', src:'/images/video11.mov', cap:'Cherished forever' },
-    ];
-
-    const total   = media.length;
-    const track   = document.getElementById('slide-track');
-    const counter = document.getElementById('slide-counter');
-    const caption = document.getElementById('slide-caption');
-    const badge   = document.getElementById('slide-type');
-    let   current = 0;
-
-    function goTo(idx) {
-      // pause any playing video before swapping
-      const old = track.firstChild;
-      if (old && old.tagName === 'VIDEO') { old.pause(); old.src = ''; }
-      track.innerHTML = '';
-
-      const item = media[idx];
-      let el;
-      if (item.t === 'img') {
-        el = document.createElement('img');
-        el.className = 'slide-media';
-        el.alt = item.alt;
-        el.onload = () => el.classList.add('loaded');
-        el.src = item.src;
-        badge.textContent = '';
-      } else {
-        el = document.createElement('video');
-        el.className = 'slide-media';
-        el.muted = true;
-        el.playsinline = true;
-        el.controls = true;
-        el.preload = 'metadata';   // only fetch first few KB
-        el.onloadeddata = () => el.classList.add('loaded');
-        el.src = item.src;
-        badge.textContent = '▶ Video';
-      }
-      track.appendChild(el);
-      counter.textContent = (idx + 1) + ' / ' + total;
-      caption.textContent = item.cap;
-      current = idx;
-    }
-
-    function step(dir) { goTo((current + dir + total) % total); }
-
-    document.getElementById('slide-prev').addEventListener('click', () => step(-1));
-    document.getElementById('slide-next').addEventListener('click', () => step(1));
-
-    // Keyboard
-    document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft')  step(-1);
-      if (e.key === 'ArrowRight') step(1);
-    });
-
-    // Touch swipe
-    let tx = 0;
-    const ss = document.getElementById('slideshow');
-    ss.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
-    ss.addEventListener('touchend',   e => {
-      const dx = tx - e.changedTouches[0].clientX;
-      if (Math.abs(dx) > 40) step(dx > 0 ? 1 : -1);
-    }, { passive: true });
-
-    goTo(0);
-  })();
 
 </script>
 </body>
