@@ -6,29 +6,29 @@
   <title>Our Anniversary &amp; Birthday Celebration</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     /* ── Reset & Base ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blush:      #f9e4ec;
-      --rose:       #e8a0b4;
-      --deep-rose:  #c9607e;
-      --gold:       #c9a84c;
-      --gold-light: #f0d080;
-      --gold-pale:  #fdf5e0;
-      --cream:      #fdf8f3;
-      --text-dark:  #3a2a2e;
-      --text-mid:   #7a5060;
-      --text-light: #b08090;
-      --white:      #ffffff;
+      --blush:      #EDE8DF;
+      --rose:       #C9C0B3;
+      --deep-rose:  #B5451B;
+      --gold:       #D4A853;
+      --gold-light: #D4A853;
+      --gold-pale:  #EDE8DF;
+      --cream:      #FAF7F2;
+      --text-dark:  #1C1C1C;
+      --text-mid:   #5C4A3A;
+      --text-light: #8A7A70;
+      --white:      #FAF7F2;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Raleway', sans-serif;
       background: var(--cream);
       color: var(--text-dark);
       overflow-x: hidden;
@@ -48,22 +48,26 @@
       justify-content: center;
       gap: 2rem;
       padding: 1rem 2rem;
-      background: rgba(253, 248, 243, 0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+      background: rgba(250, 247, 242, 0.97);
+      border-bottom: 1px solid var(--rose);
       transition: box-shadow 0.3s;
     }
-    nav.scrolled { box-shadow: 0 2px 20px rgba(201, 96, 126, 0.12); }
+    nav.scrolled { box-shadow: 0 2px 12px rgba(28, 28, 28, 0.08); }
     nav a {
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 500;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--text-mid);
-      transition: color 0.3s;
+      color: var(--text-dark);
+      transition: color 0.2s;
     }
-    nav a:hover { color: var(--gold); }
+    nav a:hover {
+      color: var(--deep-rose);
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-underline-offset: 4px;
+    }
 
     /* ── Floating hearts ──────────────────────────────────────── */
     .hearts-bg {
@@ -100,10 +104,10 @@
     .section-label {
       display: block;
       text-align: center;
-      font-family: 'Lato', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.25em;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 0.6rem;
@@ -113,7 +117,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 300;
-      color: var(--text-dark);
+      color: var(--deep-rose);
       line-height: 1.2;
       margin-bottom: 1rem;
     }
@@ -132,10 +136,7 @@
       display: block;
       width: 60px;
       height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold));
-    }
-    .section-divider::after {
-      background: linear-gradient(to left, transparent, var(--gold));
+      background: var(--rose);
     }
 
     /* ── HERO ─────────────────────────────────────────────────── */
@@ -147,10 +148,8 @@
       justify-content: center;
       text-align: center;
       padding: 5rem 1.5rem 4rem;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(249, 228, 236, 0.9) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 50% at 80% 80%, rgba(240, 208, 128, 0.25) 0%, transparent 60%),
-        var(--cream);
+      background: var(--cream);
+      border-bottom: 1px solid var(--rose);
       overflow: hidden;
     }
     .hero-pre {
@@ -180,14 +179,14 @@
       align-items: center;
       gap: 0.5rem;
       margin: 2rem 0;
-      padding: 0.6rem 1.6rem;
+      padding: 0.5rem 1.4rem;
       border: 1px solid var(--gold);
-      border-radius: 50px;
-      background: rgba(253, 245, 224, 0.7);
-      font-family: 'Lato', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
+      border-radius: 2px;
+      background: transparent;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--gold);
       opacity: 0;
@@ -240,10 +239,7 @@
       font-size: 2.8rem;
       font-weight: 600;
       line-height: 1;
-      background: linear-gradient(135deg, var(--gold), var(--deep-rose));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--deep-rose);
     }
     .countdown-label {
       font-size: 0.6rem;
@@ -274,7 +270,7 @@
     }
 
     /* ── GALLERY SLIDESHOW ────────────────────────────────────── */
-    #gallery { background: var(--white); }
+    #gallery { background: var(--blush); border-top: 1px solid var(--rose); border-bottom: 1px solid var(--rose); }
     .slideshow {
       position: relative;
       max-width: 780px;
@@ -349,7 +345,7 @@
 
     /* ── TIMELINE ─────────────────────────────────────────────── */
     #story {
-      background: linear-gradient(180deg, var(--cream) 0%, var(--blush) 100%);
+      background: var(--cream);
     }
     .timeline {
       position: relative;
@@ -361,7 +357,7 @@
       left: 50%;
       top: 0; bottom: 0;
       width: 1px;
-      background: linear-gradient(to bottom, transparent, var(--rose), var(--gold), transparent);
+      background: var(--rose);
       transform: translateX(-50%);
     }
     .timeline-item {
@@ -380,33 +376,34 @@
     }
     .timeline-content {
       flex: 1;
-      background: var(--white);
-      border-radius: 16px;
+      background: var(--blush);
+      border: 1px solid var(--rose);
+      border-radius: 4px;
       padding: 1.5rem;
-      box-shadow: 0 4px 24px rgba(201, 96, 126, 0.08);
+      box-shadow: 0 2px 16px rgba(28, 28, 28, 0.05);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .timeline-content:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(201, 96, 126, 0.14);
+      box-shadow: 0 6px 24px rgba(28, 28, 28, 0.09);
     }
     .timeline-dot {
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--rose), var(--gold));
-      border: 3px solid var(--white);
-      box-shadow: 0 0 0 3px var(--rose);
+      background: var(--deep-rose);
+      border: 3px solid var(--cream);
+      box-shadow: 0 0 0 2px var(--rose);
       flex-shrink: 0;
       margin-top: 1.5rem;
       position: relative;
       z-index: 1;
     }
     .timeline-date {
-      font-family: 'Lato', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 0.4rem;
@@ -415,36 +412,38 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.4rem;
       font-weight: 400;
-      color: var(--text-dark);
+      color: var(--deep-rose);
       margin-bottom: 0.5rem;
     }
     .timeline-text {
       font-size: 0.88rem;
-      line-height: 1.7;
+      line-height: 1.75;
       color: var(--text-mid);
     }
     .timeline-emoji { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
 
     /* ── LOVE LETTER ──────────────────────────────────────────── */
     #letter {
-      background: var(--white);
+      background: var(--blush);
+      border-top: 1px solid var(--rose);
+      border-bottom: 1px solid var(--rose);
     }
     .letter-card {
       max-width: 680px;
       margin: 0 auto;
-      background: var(--gold-pale);
-      border: 1px solid rgba(201, 168, 76, 0.3);
-      border-radius: 20px;
+      background: var(--cream);
+      border: 1px solid var(--rose);
+      border-radius: 2px;
       padding: 3rem 3.5rem;
       position: relative;
-      box-shadow: 0 8px 48px rgba(201, 168, 76, 0.12);
+      box-shadow: 0 4px 24px rgba(28, 28, 28, 0.07);
     }
     .letter-card::before,
     .letter-card::after {
       content: '❧';
       position: absolute;
       font-size: 2rem;
-      color: var(--gold-light);
+      color: var(--gold);
     }
     .letter-card::before { top: 1.2rem; left: 1.6rem; }
     .letter-card::after  { bottom: 1.2rem; right: 1.6rem; }
@@ -472,29 +471,27 @@
     .letter-wax {
       width: 56px;
       height: 56px;
-      background: radial-gradient(circle at 35% 35%, var(--rose), var(--deep-rose));
+      background: var(--deep-rose);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.4rem;
-      box-shadow: 0 4px 12px rgba(201, 96, 126, 0.35);
+      box-shadow: 0 4px 12px rgba(181, 69, 27, 0.3);
       margin: 2rem auto 0;
     }
 
     /* ── BIRTHDAY ─────────────────────────────────────────────── */
     #birthday {
-      background: linear-gradient(135deg, var(--blush) 0%, var(--gold-pale) 100%);
+      background: var(--cream);
+      border-top: 1px solid var(--rose);
       text-align: center;
       overflow: hidden;
     }
     .birthday-hero {
       font-family: 'Dancing Script', cursive;
       font-size: clamp(3rem, 10vw, 6rem);
-      background: linear-gradient(135deg, var(--deep-rose), var(--gold));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--deep-rose);
       line-height: 1.1;
       margin-bottom: 1.5rem;
     }
@@ -503,12 +500,12 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.5rem 1.4rem;
-      background: linear-gradient(135deg, var(--deep-rose), var(--gold));
-      color: var(--white);
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
+      background: var(--deep-rose);
+      color: #FAF7F2;
+      border-radius: 2px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       margin-bottom: 2.5rem;
     }
     .birthday-wishes {
@@ -517,70 +514,186 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.2rem;
       line-height: 1.8;
-      color: var(--text-dark);
+      color: var(--text-mid);
       font-style: italic;
     }
-    .birthday-candles {
+
+    /* ── CANDLE INTERACTION ───────────────────────────────────── */
+    .candle-scene {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
+      margin: 2rem auto 1.5rem;
     }
-    .candle {
+    .cake-display {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.2rem;
-      font-size: 2rem;
-      animation: flicker 1.5s ease-in-out infinite alternate;
     }
-    .candle:nth-child(2) { animation-delay: 0.3s; }
-    .candle:nth-child(3) { animation-delay: 0.6s; }
-    .candle:nth-child(4) { animation-delay: 0.9s; }
-    .candle:nth-child(5) { animation-delay: 1.2s; }
-    @keyframes flicker {
-      0%   { transform: scale(1) rotate(-1deg); filter: brightness(1); }
-      100% { transform: scale(1.05) rotate(1deg); filter: brightness(1.2); }
+    .candle-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: -1px;
     }
-    .confetti-btn {
+    .smoke-wisp {
+      width: 4px;
+      height: 0;
+      background: rgba(100, 100, 100, 0.45);
+      border-radius: 2px;
+      margin: 0 auto;
+      opacity: 0;
+    }
+    .smoke-wisp.rising {
+      animation: smokeUp 2.2s ease-out forwards;
+    }
+    @keyframes smokeUp {
+      0%   { height: 0;    opacity: 0.6; transform: scaleX(1) translateY(0); }
+      40%  { height: 22px; opacity: 0.45; transform: scaleX(2.5) translateY(-10px); }
+      100% { height: 22px; opacity: 0;   transform: scaleX(5) translateY(-34px); }
+    }
+    .flame-outer {
+      width: 18px;
+      height: 28px;
+      background: #D4A853;
+      border-radius: 50% 50% 22% 22%;
+      animation: flameFlicker 0.45s ease-in-out infinite alternate;
+      transform-origin: bottom center;
+      position: relative;
+    }
+    .flame-outer.out {
+      animation: none;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .flame-core {
+      position: absolute;
+      width: 8px;
+      height: 13px;
+      background: rgba(250, 247, 242, 0.82);
+      border-radius: 50%;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @keyframes flameFlicker {
+      0%   { transform: scaleX(1) skewX(-4deg) scaleY(1); }
+      100% { transform: scaleX(0.84) skewX(4deg) scaleY(1.09); }
+    }
+    .wick-line {
+      width: 2px;
+      height: 7px;
+      background: var(--text-dark);
+    }
+    .candle-body {
+      width: 16px;
+      height: 48px;
+      background: #FAF7F2;
+      border: 1.5px solid var(--rose);
+      border-radius: 1px;
+    }
+    .cake-tier {
+      background: var(--blush);
+      border: 1.5px solid var(--rose);
+      border-radius: 2px;
+    }
+    .cake-tier-top    { width: 88px;  height: 22px; }
+    .cake-tier-bottom { width: 130px; height: 32px; }
+    .bday-message {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      color: var(--deep-rose);
+      margin: 0 auto 1rem;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .bday-message.show { opacity: 1; transform: translateY(0); }
+    .blow-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      padding: 0.9rem 2.2rem;
-      background: linear-gradient(135deg, var(--deep-rose), var(--gold));
-      color: var(--white);
+      gap: 0.5rem;
+      padding: 0.9rem 2.4rem;
+      background: var(--deep-rose);
+      color: #FAF7F2;
       border: none;
-      border-radius: 50px;
-      font-family: 'Lato', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
+      border-radius: 2px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       cursor: pointer;
-      box-shadow: 0 6px 24px rgba(201, 96, 126, 0.35);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: opacity 0.2s;
+      margin-bottom: 2.5rem;
     }
-    .confetti-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(201, 96, 126, 0.45);
+    .blow-btn:hover   { opacity: 0.85; }
+    .blow-btn:disabled { opacity: 0.35; cursor: default; }
+
+    /* ── SPLASH SCREEN ────────────────────────────────────────── */
+    #splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      background: #1C1C1C;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 2.5rem;
+      transition: opacity 0.9s ease;
     }
-    .confetti-btn:active { transform: translateY(0); }
+    #splash.hidden { opacity: 0; pointer-events: none; }
+    .splash-eyebrow {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #D4A853;
+      margin-bottom: 2rem;
+    }
+    .splash-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 4vw, 2.6rem);
+      font-weight: 300;
+      color: #FAF7F2;
+      max-width: 620px;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+    }
+    .splash-btn {
+      padding: 1rem 3.2rem;
+      background: #B5451B;
+      color: #FAF7F2;
+      border: none;
+      border-radius: 2px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .splash-btn:hover { opacity: 0.85; }
 
     /* ── FOOTER ───────────────────────────────────────────────── */
     footer {
       text-align: center;
       padding: 3rem 1.5rem;
-      background: var(--text-dark);
-      color: var(--text-light);
-      font-size: 0.8rem;
+      background: #1C1C1C;
+      color: #8A7A70;
+      font-size: 0.78rem;
       letter-spacing: 0.08em;
       position: relative;
       z-index: 1;
+      border-top: 1px solid #2E2E2E;
     }
     footer .footer-hearts {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin-bottom: 0.8rem;
+      color: #B5451B;
     }
     footer p + p { margin-top: 0.4rem; }
 
@@ -623,14 +736,22 @@
         text-align: left;
       }
       .timeline-dot { display: none; }
-      .timeline-content { border-left: 3px solid var(--rose); border-radius: 0 16px 16px 0; }
+      .timeline-content { border-left: 3px solid var(--deep-rose); border-radius: 0; }
       .slideshow { aspect-ratio: 3/4; }
       .letter-card { padding: 2rem 1.5rem; }
       .hero-dates { gap: 1.5rem; }
+      .splash-headline { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
+
+<!-- Splash / Entry screen -->
+<div id="splash">
+  <p class="splash-eyebrow">A message for you</p>
+  <h1 class="splash-headline">Hey Baby! This is a warning! You will come back to this page many more days after today!</h1>
+  <button class="splash-btn" onclick="enterSite()">Enjoy</button>
+</div>
 
 <!-- Floating hearts background -->
 <div class="hearts-bg" id="heartsContainer"></div>
@@ -863,6 +984,8 @@
 <section id="birthday">
   <div class="container">
     <span class="section-label">March 11th</span>
+    <h2 class="section-title">Happy Birthday</h2>
+    <div class="section-divider">♥</div>
 
     <div class="birthday-hero">Happy Birthday,<br />My Love!</div>
 
@@ -870,21 +993,29 @@
       🎂 &nbsp;March 11th
     </div>
 
-    <div class="birthday-candles reveal">
-      <div class="candle">🕯️</div>
-      <div class="candle">🕯️</div>
-      <div class="candle">🎂</div>
-      <div class="candle">🕯️</div>
-      <div class="candle">🕯️</div>
+    <!-- Interactive candle -->
+    <div class="candle-scene reveal">
+      <div class="cake-display">
+        <div class="candle-unit">
+          <div class="smoke-wisp" id="smoke"></div>
+          <div class="flame-outer" id="flame"><div class="flame-core"></div></div>
+          <div class="wick-line"></div>
+          <div class="candle-body"></div>
+        </div>
+        <div class="cake-tier cake-tier-top"></div>
+        <div class="cake-tier cake-tier-bottom"></div>
+      </div>
     </div>
+
+    <p class="bday-message" id="bday-msg">Happy Birthday, My Miracle! 🎂❤️</p>
+
+    <button class="blow-btn" id="blow-btn" onclick="blowCandle()">
+      Blow the Candle 🎂
+    </button>
 
     <p class="birthday-wishes reveal">
       On this very special day, I want you to know how much light you bring into this world — and into my life. May this birthday be as wonderful, warm, and full of joy as you make every single one of my days. You deserve every beautiful thing the world has to offer.
     </p>
-
-    <button class="confetti-btn" onclick="launchConfetti()">
-      🎉 &nbsp;Celebrate!
-    </button>
   </div>
 </section>
 
@@ -899,6 +1030,78 @@
 
 <!-- ─────────────────── SCRIPTS ─────────────────── -->
 <script>
+  /* ── Splash screen ─────────────────────────────────────────── */
+  (function() {
+    if (sessionStorage.getItem('splashSeen')) {
+      const s = document.getElementById('splash');
+      if (s) s.remove();
+    }
+  })();
+
+  function enterSite() {
+    sessionStorage.setItem('splashSeen', '1');
+    const s = document.getElementById('splash');
+    s.classList.add('hidden');
+    setTimeout(() => s.remove(), 950);
+  }
+
+  /* ── Candle blow interaction ───────────────────────────────── */
+  function blowCandle() {
+    const btn   = document.getElementById('blow-btn');
+    const flame = document.getElementById('flame');
+    const smoke = document.getElementById('smoke');
+    const msg   = document.getElementById('bday-msg');
+    btn.disabled = true;
+    flame.classList.add('out');
+    setTimeout(() => smoke.classList.add('rising'), 220);
+    setTimeout(() => msg.classList.add('show'), 750);
+    setTimeout(launchPetals, 350);
+  }
+
+  function launchPetals() {
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx    = canvas.getContext('2d');
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const colours = ['#D4A853','#B5451B','#FAF7F2','#E8B4A0','#EDE8DF','#C9C0B3'];
+    const pieces  = Array.from({ length: 150 }, () => ({
+      x:     Math.random() * canvas.width,
+      y:     Math.random() * -canvas.height,
+      w:     5 + Math.random() * 10,
+      h:     8 + Math.random() * 8,
+      rot:   Math.random() * 360,
+      vx:    (Math.random() - 0.5) * 3.5,
+      vy:    2 + Math.random() * 4.5,
+      vr:    (Math.random() - 0.5) * 7,
+      color: colours[Math.floor(Math.random() * colours.length)],
+    }));
+    let frame, startTime = null;
+    const dur = 4000;
+    function draw(ts) {
+      if (!startTime) startTime = ts;
+      const elapsed = ts - startTime;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      pieces.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.rot += p.vr;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot * Math.PI / 180);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = Math.max(0, 1 - elapsed / dur);
+        ctx.beginPath();
+        ctx.ellipse(0, 0, p.w / 2, p.h / 2, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      });
+      if (elapsed < dur) {
+        frame = requestAnimationFrame(draw);
+      } else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
   /* ── Floating hearts ──────────────────────────────────────── */
   (function spawnHearts() {
     const container = document.getElementById('heartsContainer');
@@ -1070,56 +1273,6 @@
     goTo(0);
   })();
 
-  /* ── Confetti ─────────────────────────────────────────────── */
-  function launchConfetti() {
-    const canvas = document.getElementById('confetti-canvas');
-    const ctx    = canvas.getContext('2d');
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const colours = ['#e8a0b4','#c9607e','#c9a84c','#f0d080','#f9e4ec','#ffffff'];
-    const pieces  = Array.from({ length: 120 }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * -canvas.height,
-      w: 6 + Math.random() * 8,
-      h: 10 + Math.random() * 6,
-      rot: Math.random() * 360,
-      vx: (Math.random() - 0.5) * 3,
-      vy: 2 + Math.random() * 4,
-      vr: (Math.random() - 0.5) * 6,
-      color: colours[Math.floor(Math.random() * colours.length)],
-    }));
-
-    let frame;
-    let startTime = null;
-    const duration = 4000;
-
-    function draw(ts) {
-      if (!startTime) startTime = ts;
-      const elapsed = ts - startTime;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      pieces.forEach(p => {
-        p.x  += p.vx;
-        p.y  += p.vy;
-        p.rot += p.vr;
-        ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(p.rot * Math.PI / 180);
-        ctx.fillStyle = p.color;
-        ctx.globalAlpha = Math.max(0, 1 - elapsed / duration);
-        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
-        ctx.restore();
-      });
-      if (elapsed < duration) {
-        frame = requestAnimationFrame(draw);
-      } else {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        cancelAnimationFrame(frame);
-      }
-    }
-    cancelAnimationFrame(frame);
-    requestAnimationFrame(draw);
-  }
 </script>
 </body>
 </html>
